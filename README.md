@@ -51,12 +51,12 @@ correctness can be directly diffed between CPU and GPU runs on every config.
 
 ```bash
 # CPU baseline
-g++ cache_sim_flat.cc -o cache_sim_flat_sweep
-./cache_sim_flat_sweep <blocksize> <l1_size> <l1_assoc> <l2_size> <l2_assoc> <pref_n> <pref_m> <trace_file>
+g++ cache_sim_flat.cc -o cache_sim_flat
+./cache_sim_flat <trace_file>
 
 # GPU version
 nvcc --expt-relaxed-constexpr cache_sim_gpu.cu -o cache_sim_gpu_cuda
-./cache_sim_gpu_cuda <blocksize> <l1_size> <l1_assoc> <l2_size> <l2_assoc> <pref_n> <pref_m> <trace_file>
+./cache_sim_gpu_cuda <trace_file>
 ```
 
 Note: the sweep itself iterates over internally-defined arrays of
