@@ -1,4 +1,4 @@
-# CUDA-Accelerated Cache Simulator Design-Space Sweep
+# CUDA Cache Simulator
 
 A cycle-accurate, multi-level cache simulator (LRU replacement, hardware
 prefetching via stream buffers) ported from a class-based C++ implementation
